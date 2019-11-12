@@ -13,6 +13,7 @@ import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
+import com.mfvargas.navigationdrawer.modelos.User
 
 class MainActivity : AppCompatActivity() {
 
@@ -42,6 +43,10 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        var user=User("Andrés",
+            "Cotizante",true)
+        println("Gatubela: ${user.nameUser}")
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
